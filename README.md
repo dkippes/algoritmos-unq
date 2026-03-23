@@ -37,7 +37,7 @@ code .
 
 ### Compilar un programa
 ```bash
-g++ -std=c++17 -O2 -Wall -Wextra -Wshadow -o sol sol.cpp
+g++ -std=c++11 -O2 -Wall -Wextra -Wshadow -o sol sol.cpp
 ```
 
 ### Ejecutar
@@ -85,7 +85,7 @@ code .
 
 ### Compilar un programa (Mac)
 ```bash
-g++-15 -std=c++17 -O2 -Wall -Wextra -Werror -Wpedantic -Wshadow -Wconversion -o sol sol.cpp
+g++-15 -std=c++11 -O2 -Wall -Wextra -Werror -Wpedantic -Wshadow -Wconversion -o sol sol.cpp
 ```
 
 ### Ejecutar
