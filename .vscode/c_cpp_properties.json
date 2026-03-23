@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/Cellar/gcc/15.2.0_1/include/c++/15/**"
+            ],
+            "compilerPath": "/usr/local/bin/g++-15",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
