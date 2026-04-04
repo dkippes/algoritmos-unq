@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug C++",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/Practicas/Practica 1/1. UVA 10038 - Jolly Jumpers/10038",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/Practicas/Practica 1/1. UVA 10038 - Jolly Jumpers",
+      "MIMode": "lldb",
+      "console": "integratedTerminal",
+      "setupCommands": [
+        {
+          "text": "settings set target.input-path '${workspaceFolder}/Practicas/Practica 1/1. UVA 10038 - Jolly Jumpers/in.txt'",
+          "ignoreFailures": false
+        }
+      ]
+    }
+  ]
+}

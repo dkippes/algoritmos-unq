@@ -108,7 +108,54 @@ cat in.txt | ./sol
 cat in.txt | ./sol > out.txt
 ```
 
-> **Nota:** En Mac, `g++` es en realidad Clang bajo el capó. Para usar GCC real (más fiel al juez online) podés instalarlo con `brew install gcc` y usar `g++-14` en lugar de `g++`.
+> **Nota:** En Mac, `g++` es en realidad Clang bajo el capó. Para usar GCC real (más fiel al juez online) podés instalarlo con `brew install gcc` y usar `g++-15` en lugar de `g++`.
+
+---
+
+## Debuggear con VS Code (Mac)
+
+### 1. Instalar la extensión
+Instalá **C/C++** de Microsoft (ms-vscode.cpptools) desde el panel de extensiones.
+
+### 2. Compilar con símbolos de debug
+```bash
+g++-15 -std=c++11 -g -o sol sol.cpp
+```
+
+### 3. Configurar launch.json
+Creá `.vscode/launch.json` con:
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug C++",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/sol",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "MIMode": "lldb"
+    }
+  ]
+}
+```
+
+### 4. Atajos del debugger
+| Acción | Atajo |
+|--------|-------|
+| Poner/sacar breakpoint | `F9` |
+| Iniciar debug | `F5` |
+| Siguiente línea (step over) | `F10` |
+| Entrar a función (step into) | `F11` |
+| Salir de función | `Shift+F11` |
+| Continuar hasta próximo breakpoint | `F5` |
+
+### Configuración actual de VS Code
+- Compilador: `g++-15`
+- Standard: `c++11`
+- Archivo de config: `.vscode/c_cpp_properties.json`
 
 ---
 
